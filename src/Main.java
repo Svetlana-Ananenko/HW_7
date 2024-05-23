@@ -2,33 +2,33 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("___Задача №1___");
-        int summa = 15000;
-        int sediments = 0;
+        int monthlyContribution = 15000;
+        int amountOfSavings = 0;
         int month = 0;
 
-        while (sediments <= 2459000) {
+        while (amountOfSavings <= 2459000) {
             month ++;
-            sediments = sediments + summa;
-            sediments = sediments + sediments/100;
+            amountOfSavings = amountOfSavings + monthlyContribution; // сумма накоплений + ежемесячный вклад
+            amountOfSavings = amountOfSavings + amountOfSavings/100; // сумма накоплений учитывая процент
 
-            System.out.println("Месяц " + month + " , сумма накоплений равна " + sediments + " рублей");
+            System.out.println("Месяц " + month + " , сумма накоплений равна " + amountOfSavings + " рублей");
         }
 
 
 
         System.out.println("___Задача №2___");
-        int chislo = 1;
-        while (chislo <= 10) {
-            System.out.print(chislo + " ");
-            chislo ++;
+        int number = 1;
+        while (number <= 10) {
+            System.out.print(number + " ");
+            number ++;
         }
         System.out.println(" ");
 
-        int chislo2 = 10;
-        while (chislo2 > 0) {
+        int number2 = 10;
+       for (; number2 > 0; ) {
 
-            System.out.print( chislo2 + " ");
-            chislo2 --;
+            System.out.print( number2 + " ");
+            number2 --;
         }
         System.out.println(" ");
 
@@ -42,8 +42,8 @@ public class Main {
         int year = 1;
 
         while (year <= 10) {
-            long populationAfterYears = population + ((fertility - mortality) * year);
-            System.out.println("Год " + year + " , численность населения составляет " + populationAfterYears );
+            population = population + ((fertility*population)/1000) - ((mortality*population)/1000);
+            System.out.println("Год " + year + " , численность населения составляет " + population );
             year ++;
         }
 
@@ -53,47 +53,46 @@ public class Main {
         System.out.println("___Задача №4___");
         long contribution = 15_000;
         long accumulation = contribution;
-        int month5 = 1;
+        int numberMonth = 1;
 
         while (accumulation <= 12_000_000) {
             accumulation = accumulation + ((accumulation*7)/100);
-            System.out.println("Месяц " + month5 + " , сумма накоплений составляет: " + accumulation + " руб. ");
-            month5 ++;
+            System.out.println("Месяц " + numberMonth + " , сумма накоплений составляет: " + accumulation + " руб. ");
+            numberMonth ++;
         }
 
 
 
 
         System.out.println("___Задача №5___");
-        long contribution2 = 15_000;
-        long accumulation2 = contribution2;
-        int month2 = 1;
+        long depositAmount = 15_000;
+        long amountOfSavingsNew = depositAmount;
+        int numberMonthNew = 1;
 
-        while (accumulation2 <= 12_000_000) {
-            accumulation2 = accumulation2 + ((accumulation2*7)/100);
-            if (month2 % 6 == 0) {
-                System.out.println("Месяц " + month2 + " , сумма накоплений составляет: " + accumulation2 + " руб. ");
+        while (amountOfSavingsNew <= 12_000_000) {
+            amountOfSavingsNew = amountOfSavingsNew + ((amountOfSavingsNew*7)/100);
+            if (numberMonthNew % 6 == 0) {
+                System.out.println("Месяц " + numberMonthNew + " , сумма накоплений составляет: " + amountOfSavingsNew + " руб. ");
             }
-            month2 ++;
+            numberMonthNew ++;
         }
 
 
 
         System.out.println("___Задача №6___");
-        long contribution3 = 15_000;
-        long accumulation3 = contribution3;
-        int month3 = 1;
-        int kol_voYears = 9;
-        int kol_voMonthInYear = 12;
-        int term = kol_voYears * kol_voMonthInYear;
+        long depositAmountNew = 15_000;
+        long accumulationNew = depositAmountNew;
+        int monthNew = 1;
+        int quantityYears = 9;
+        int term = quantityYears * 12;
 
-        while (month3 <= term) {
-            accumulation3 = accumulation3 + ((accumulation3*7)/100);
+        while (monthNew <= term) {
+            accumulationNew = accumulationNew + ((accumulationNew*7)/100);
 
-            if (month3 % 6 == 0) {
-                System.out.println("Месяц " + month3 + " , сумма накоплений составляет: " + accumulation3 + " руб. ");
+            if (monthNew % 6 == 0) {
+                System.out.println("Месяц " + monthNew + " , сумма накоплений составляет: " + accumulationNew + " руб. ");
             }
-            month3 ++;
+            monthNew ++;
         }
 
 
@@ -113,10 +112,10 @@ public class Main {
 
         System.out.println("___Задача №8___");
         int startingPoint = 2024;
-        int period200 = 200;
-        int period100 = 100;
-        int beginningOfReviewPeriod = startingPoint - period200;
-        int endOfReviewPeriod = startingPoint + period100;
+        int period200YearsAgo = 200;
+        int period100YearsAhead = 100;
+        int beginningOfReviewPeriod = startingPoint - period200YearsAgo;
+        int endOfReviewPeriod = startingPoint + period100YearsAhead;
 
         for (int i=0; i <= endOfReviewPeriod; i=i+79) {
             if (i >= beginningOfReviewPeriod && i <= endOfReviewPeriod) {
