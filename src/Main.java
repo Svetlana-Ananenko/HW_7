@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
+        final int MONTHS_IN_YEAR = 12;
+
+
         System.out.println("___Задача №1___");
         int monthlyContribution = 15000;
         int amountOfSavings = 0;
@@ -84,7 +87,7 @@ public class Main {
         long accumulationNew = depositAmountNew;
         int monthNew = 1;
         int quantityYears = 9;
-        int term = quantityYears * 12;
+        int term = quantityYears * MONTHS_IN_YEAR;
 
         while (monthNew <= term) {
             accumulationNew = accumulationNew + ((accumulationNew*7)/100);
